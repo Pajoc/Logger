@@ -29,7 +29,7 @@ namespace ConsoleApp1
         }
 
         //public string logType(varName vName)
-        public string logType(Action<string> vName)
+        public string LogType(Action<string> vName)
         {
             var interfType = _logObject.GetType();
             string myData;

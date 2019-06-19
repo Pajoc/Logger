@@ -9,7 +9,7 @@ namespace ConsoleApp1
     public class AuthLogger : ILogger
     {
         private ILogger _Logger;
-        private string _Credential;
+        private readonly string _Credential;
 
         public AuthLogger(ILogger Logger, string Credential)
         {
@@ -19,7 +19,7 @@ namespace ConsoleApp1
 
         public void LogErrorMsg(string msg)
         {
-            if (isValidCred())
+            if (IsValidCred())
             {
                 _Logger.LogErrorMsg("Log the error");
             }
@@ -31,7 +31,7 @@ namespace ConsoleApp1
 
         public void LogWarningMsg(string msg)
         {
-            if (isValidCred())
+            if (IsValidCred())
             {
                 _Logger.LogErrorMsg("Lof the warning");
             }
@@ -41,7 +41,7 @@ namespace ConsoleApp1
             }
         }
 
-        private bool isValidCred()
+        private bool IsValidCred()
         {
             if (!string.IsNullOrEmpty(_Credential))
             {

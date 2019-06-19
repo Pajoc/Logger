@@ -33,15 +33,18 @@ namespace ConsoleApp1
 
             Console.ForegroundColor = ConsoleColor.White;
 
-            Console.WriteLine(myLogger.logType(GetadtData));
+            Console.WriteLine(myLogger.LogType(GetadtData));
 
             string firstName = "Paulo";
             string lastName = "Costa";
 
-            Func<string,string,string> Concat = (f,l) => $"Concatened: {f} {l}";
+            Func<string,string,string> concat = (f,l) => $"Concatened: {f} {l}";
 
-            Console.WriteLine(Concat(firstName, lastName));
+            Console.WriteLine(concat(firstName, lastName));
 
+            string v1 = "teste";
+            string v2 = "teste";
+            Console.WriteLine(v1==v2);
 
 
             Console.ReadKey();
